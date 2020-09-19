@@ -1,0 +1,19 @@
+@startuml
+left to right direction
+
+actor 消费者
+actor 服务员
+actor 管理员
+rectangle 就餐卡系统 {
+  消费者 -- (注册)
+  消费者 -- (缴费)
+}
+rectangle 支付系统 {
+  消费者 -- (收付款)
+  服务员 -- (收付款)
+}
+rectangle 监视系统 {
+  管理员 -- (查看消费记录)
+  管理员 -- (打印统计数据)
+}
+@enduml
